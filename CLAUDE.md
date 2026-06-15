@@ -30,6 +30,6 @@ git push origin <ブランチ名>
 1. `git init` でローカルリポジトリを初期化
 2. GitHub にリポジトリを作成し、リモートを登録：
    ```bash
-   git remote add origin https://github.com/<username>/realestate-app.git
+   git remote add origin https://github.com/hourglassfigure-smartman/samurai-terakoya-realestate-app.git
    ```
 3. プロジェクトの技術スタックが決定したら、このファイルにビルド・テスト・リント手順を追記する
