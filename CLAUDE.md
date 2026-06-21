@@ -23,7 +23,8 @@ npm run lint     # ESLintによる静的解析
 - `src/contexts/AuthContext.jsx` — ログイン状態をアプリ全体で共有するContext。`signUp` / `signIn` / `signOut`とセッション監視（`onAuthStateChange`）を提供
 - `src/components/ProtectedRoute.jsx` — 未ログイン時に`/login`へリダイレクトするラッパー。ログイン必須ページは`App.jsx`でこれを介してルーティングする
 - `src/pages/` — `Login.jsx`（ログイン）、`SignUp.jsx`（会員登録）、`Properties.jsx`（ログイン後の物件一覧、カード形式）
-- `src/data/dummyProperties.js` — 物件一覧のダミーデータ。将来的にSupabaseのテーブルから取得する場合はこのモジュールを置き換える
+- `src/pages/Properties.jsx` — Supabaseの`properties`テーブルから`supabase.from('properties').select('*')`で取得して表示する
+- `supabase/migrations/` — Supabase上で実行するSQL migration。`0001_create_properties.sql`が`properties`テーブルの作成・RLSポリシー・サンプルデータ投入を行う。Supabaseダッシュボードの SQL Editor で実行する
 - 環境変数（`.env`）はコミットしない。新しい環境変数を追加する場合は`.env.example`にも追記する
 
 ## Git・GitHub 運用ルール
