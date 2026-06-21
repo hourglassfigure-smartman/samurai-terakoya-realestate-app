@@ -44,6 +44,13 @@ git push origin <ブランチ名>
 - `main` / `master` への直接プッシュは避け、機能ブランチを使う
 - プッシュ前に `git status` と `git diff` で変更内容を確認する
 
+## デプロイ情報
+
+- 本番URL：https://samurai-terakoya-realestate-app.vercel.app
+- Supabaseプロジェクト名：realestate-app
+- Vercelへのデプロイはmainブランチへのプッシュで自動実行される
+- 環境変数（`VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`）はVercelダッシュボードで管理する
+
 ## プロジェクトセットアップ
 
 このリポジトリはまだ初期化されていない。初回セットアップ時に以下を行うこと：
